@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f5f2; /* tono cálido y limpio */
+    color: #3B2F2F;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title {
+   text-align: center;
+   color: #3B2F2F;
+}
+
+.distributor {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.text {
+    max-width: 800px;
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    background-color: #D8D1D1;
+    gap: 40px;
+    padding: 10px;
+    border-bottom: 2px solid #C0B8B8;
+    border-top:  2px solid #C0B8B8;;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #3B2F2F;
+    
+   
+}
+
+.navbar a:hover {
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    padding: 6px 12px;
+    transition: 0.3s ease;
+}
+
+/*MAIN*/
+h2 {
+    margin: 20px;
+}
+
+.title-3 {
+    margin: 20px;
+    font-size: 18px;
+    color: #3a2c2c;
+    margin-bottom: 8px;
+} 
+
+.contenedor-almendras, .contenedor-nueces, .contenedor-pasas-uvas, .contenedor-ajos {
+    margin: 20px;
+    
+}
+
+.contenedor-productos img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px; object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.contenedor-productos img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+.parraf-ajos {
+    max-width: 250px;
+    margin: auto;
+    
+}
+
+.contenedor-productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    background-color: #f4efed;
+    padding: 40px 20px;
+    gap: 50px;
+}
+
+.contenedor-productos > div {
+  background-color: #fffdfb; /* un blanco más suave */
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  padding: 20px;
+  text-align: center;
+  width: 270px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.contenedor-productos > div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.contenedor-productos p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.title-2 {
+  text-align: center;
+  font-size: 24px;
+  border-bottom: 2px solid #d9c9b3;
+  display: inline-block;
+  padding-bottom: 6px;
+  margin-bottom: 30px;
+}
