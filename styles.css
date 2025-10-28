@@ -298,3 +298,319 @@ button:hover {
                 font-size: 1em;
             }
         }
+/* Notificación personalizada */
+
+        .notification {
+            position: fixed;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+            display: none;
+            align-items: center;
+            gap: 15px;
+            z-index: 9999;
+            transition: all 0.4s ease;
+            max-width: 90%;
+            opacity: 0;
+        }
+
+        .notification.show {
+            display: flex;
+            top: 30px;
+            opacity: 1;
+        }
+
+        .notification-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #6dd5c3;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .notification-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: white;
+            stroke-width: 3;
+        }
+
+        .notification-content {
+            flex: 1;
+        }
+
+        .notification-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .notification-message {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .notification-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #999;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: color 0.3s;
+        }
+
+        .notification-close:hover {
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .contact-section {
+                margin: 40px 20px;
+                padding: 30px 20px;
+            }
+
+            .nosotros-content h2 {
+                font-size: 1.8em;
+            }
+
+            .nosotros-content p {
+                font-size: 1em;
+            }
+
+            .notification {
+                padding: 15px 20px;
+                max-width: 85%;
+            }
+
+            .notification-icon {
+                width: 35px;
+                height: 35px;
+            }
+
+            .notification-title {
+                font-size: 1em;
+            }
+
+            .notification-message {
+                font-size: 0.9em;
+            }
+        }
+
+
+        /*Ofertas especiales*/
+
+        h2 {
+          text-align: center;
+          color: #2d3436;
+          font-size: 2rem;
+          margin-bottom: 40px;
+          text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .offers-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      background: #f8f9fa;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.1);
+    }
+
+    .badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 25px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      z-index: 2;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    .stock-indicator {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 5px 12px;
+      border-radius: 15px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #ff6b6b;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .card-content {
+      padding: 25px;
+    }
+
+    .card-content h3 {
+      margin: 0 0 12px;
+      font-size: 1.3rem;
+      color: #2d3436;
+      font-weight: 700;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #636e72;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .product-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 15px;
+      color: #636e72;
+      font-size: 0.9rem;
+    }
+
+    .stock-bar {
+      width: 100%;
+      height: 6px;
+      background: #e9ecef;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+
+    .stock-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #ff6b6b, #ff8787);
+      border-radius: 10px;
+      transition: width 0.5s ease;
+    }
+
+    .price-section {
+      margin-bottom: 20px;
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #b2bec3;
+      font-size: 1rem;
+    }
+
+    .new-price {
+      color: #00b894;
+      font-weight: 800;
+      font-size: 1.5rem;
+    }
+
+    .savings {
+      display: inline-block;
+      background: #d4f8e8;
+      color: #00b894;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .offer-btn {
+      display: block;
+      background: linear-gradient(135deg, #00b894, #00cec9);
+      color: white;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: 700;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
+    }
+
+    .offer-btn:hover {
+      background: linear-gradient(135deg, #00cec9, #00b894);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
+    }
+
+    .offer-btn:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .offers-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }

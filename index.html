@@ -45,11 +45,24 @@
                 <img class="img-ajos" src="https://4.bp.blogspot.com/-t5HP9qJUlSc/WfdbWrKOaZI/AAAAAAAAgb4/5eiLW-wDDUENqQhvmXT6HuidHtuIzJHlQCLcBGAs/s1600/ajo%2Bperuano.jpg" alt="">
                 <p class="parraf-ajos">Te enriquezen las comidas y fuerte en minerales: Los podes pedir tanto como desgranados y pelados</p>
             </div>
+            <!-- Notificación personalizada -->
+               <div class="notification" id="notification">
+        <div class="notification-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 6L9 17L4 12" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="notification-content">
+            <div class="notification-title">¡Mensaje enviado!</div>
+            <div class="notification-message">Responderemos tu consulta a la brevedad.</div>
+        </div>
+        <button class="notification-close" onclick="hideNotification()">×</button>
+    </div>
                 <h2 class="title-form">Contactanos</h2>
         </section>
         <section class="section-form">
             <div>
-                <form action="" method="post">
+                <form id="contactForm" onsubmit="return false;">
                     <div class="field">
                     <label for="nombre">Nombre y Apellido: </label>
                      <input type="text" name="nombre" id="nombre">
@@ -88,7 +101,105 @@
             <div class="nosotros-image"></div>
         </div>
     </div>
+
+    <!-- Sección Ofertas -->
+
+    <h2>🌰 Ofertas Especiales - Don Alfonso</h2>
+
+     <div class="offers-container">
+    <div class="card">
+      <div class="image-container">
+        <span class="badge">25% OFF</span>
+        <span class="stock-indicator">⚡ Stock limitado</span>
+        <img src="https://images.unsplash.com/photo-1615485290454-7d0fc5d23664?auto=format&fit=crop&w=600&q=60" alt="Almendras Premium">
+      </div>
+      <div class="card-content">
+        <h3>Almendras Premium</h3>
+        <p>Almendras seleccionadas sin cáscara, ideales para un snack saludable. 🥜</p>
+        <div class="product-info">
+          <strong>📦 1 kg</strong>
+        </div>
+        <div class="stock-bar">
+          <div class="stock-fill" style="width: 35%;"></div>
+        </div>
+        <div class="price-section">
+          <div class="price">
+            <span class="old-price">$8.500</span>
+            <span class="new-price">$6.375</span>
+          </div>
+          <span class="savings">💰 Ahorrás $2.125</span>
+        </div>
+        <a href="#" class="offer-btn">Agregar al Carrito</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="image-container">
+        <span class="badge">30% OFF</span>
+        <img src="https://images.unsplash.com/photo-1604908177522-0406f95e3a62?auto=format&fit=crop&w=600&q=60" alt="Nueces sin cáscara">
+      </div>
+      <div class="card-content">
+        <h3>Nueces sin Cáscara</h3>
+        <p>Nueces frescas, perfectas para repostería y consumo directo. 🌰</p>
+        <div class="product-info">
+          <strong>📦 500 g</strong> • Hasta agotar stock
+        </div>
+        <div class="price-section">
+          <div class="price">
+            <span class="old-price">$5.200</span>
+            <span class="new-price">$3.640</span>
+          </div>
+          <span class="savings">💰 Ahorrás $1.560</span>
+        </div>
+        <a href="#" class="offer-btn">Agregar al Carrito</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="image-container">
+        <span class="badge">20% OFF</span>
+        <img src="https://images.unsplash.com/photo-1615485290393-d5016cf1e6be?auto=format&fit=crop&w=600&q=60" alt="Mix de frutos secos">
+      </div>
+      <div class="card-content">
+        <h3>Mix de Frutos Secos</h3>
+        <p>Combinación de almendras, nueces, avellanas y castañas. 🥣</p>
+        <div class="product-info">
+          <strong>📦 750 g</strong> • ⭐ Oferta de la semana
+        </div>
+        <div class="price-section">
+          <div class="price">
+            <span class="old-price">$7.800</span>
+            <span class="new-price">$6.240</span>
+          </div>
+          <span class="savings">💰 Ahorrás $1.560</span>
+        </div>
+        <a href="#" class="offer-btn">Agregar al Carrito</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="image-container">
+        <span class="badge">15% OFF</span>
+        <img src="https://images.unsplash.com/photo-1621315271777-36b8f416a3a2?auto=format&fit=crop&w=600&q=60" alt="Pistachos tostados">
+      </div>
+      <div class="card-content">
+        <h3>Pistachos Tostados</h3>
+        <p>Pistachos naturalmente tostados y salados, snack irresistible. 🌿</p>
+        <div class="product-info">
+          <strong>📦 500 g</strong> • 🆕 Nuevo ingreso
+        </div>
+        <div class="price-section">
+          <div class="price">
+            <span class="old-price">$9.500</span>
+            <span class="new-price">$8.075</span>
+          </div>
+          <span class="savings">💰 Ahorrás $1.425</span>
+        </div>
+        <a href="#" class="offer-btn">Agregar al Carrito</a>
+      </div>
+    </div>
+  </div>
     </main>
-        
+        <script src="./main.js"></script>
 </body>
 </html>
