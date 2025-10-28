@@ -206,3 +206,95 @@ button:hover {
     background: #4ed1c0;
       transform: translateY(-2px);
 }
+
+/*Seccion Nosotros*/
+
+.nosotros-section {
+            max-width: 1200px;
+            margin: 80px auto 60px;
+            padding: 0 20px;
+        }
+
+        .nosotros-container {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .nosotros-content {
+            padding: 60px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .nosotros-content h2 {
+            font-size: 2.2em;
+            color: #3d3d3d;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .nosotros-content h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #6dd5c3;
+            margin-top: 10px;
+        }
+
+        .nosotros-content p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .nosotros-image {
+            position: relative;
+            min-height: 400px;
+            background: linear-gradient(rgba(109, 213, 195, 0.1), rgba(109, 213, 195, 0.1)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%23d4a574" width="800" height="600"/><g fill="%23a67c52" opacity="0.3"><circle cx="200" cy="150" r="80"/><circle cx="600" cy="200" r="60"/><circle cx="400" cy="400" r="100"/><circle cx="150" cy="450" r="70"/><circle cx="650" cy="450" r="90"/></g><text x="400" y="300" font-family="Arial" font-size="60" fill="%238b6f47" text-anchor="middle" opacity="0.5">FRUTOS SECOS</text></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+
+        @media (max-width: 968px) {
+            .nosotros-container {
+                grid-template-columns: 1fr;
+            }
+
+            .nosotros-content {
+                padding: 40px 30px;
+            }
+
+            .nosotros-image {
+                min-height: 300px;
+                order: -1;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .contact-section {
+                margin: 40px 20px;
+                padding: 30px 20px;
+            }
+
+            .nosotros-content h2 {
+                font-size: 1.8em;
+            }
+
+            .nosotros-content p {
+                font-size: 1em;
+            }
+        }
