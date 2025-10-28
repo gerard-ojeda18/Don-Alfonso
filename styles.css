@@ -134,16 +134,18 @@ h2 {
 
 .section-form {
     margin: 20px;
+   
+}
+.div-title2 {
+   text-align: center;
 }
 
-.title-form {
-  text-align: center;
-  font-size: 24px;
-  border-bottom: 2px solid #d9c9b3;
-  display: inline-block;
-  padding-bottom: 6px;
-  margin-bottom: 30px;;
-    
+.div-title2 h2 {
+   font-size: 24px;
+   border-bottom: 2px solid #d9c9b3;
+   display: inline-block;
+   position: relative;
+   
 }
 
 form {
