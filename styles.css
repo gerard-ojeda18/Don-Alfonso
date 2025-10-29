@@ -10,37 +10,50 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+header {
+  padding: 20px;
+}
+
 .title {
    text-align: center;
    color: #3B2F2F;
+   font-size: clamp(1.5rem, 5vw, 2.5rem);
+   margin: 10px 0;
 }
 
 .distributor {
     text-align: center;
     margin-top: 20px;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
 .text {
     max-width: 800px;
-    margin: auto;
+     margin: 20px auto;
+    padding: 0 20px;
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+
 }
 
 .navbar {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
     margin-top: 20px;
     background-color: #D8D1D1;
-    gap: 40px;
-    padding: 10px;
+    padding: 15px 10px;
     border-bottom: 2px solid #C0B8B8;
-    border-top:  2px solid #C0B8B8;;
+    border-top: 2px solid #C0B8B8;
 }
 
 .navbar a {
     text-decoration: none;
     color: #3B2F2F;
-    
+    padding: 8px 16px;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    white-space: nowrap;
    
 }
 
@@ -48,33 +61,69 @@ body {
     border-radius: 4px;
     background-color: black;
     color: white;
-    padding: 6px 12px;
     transition: 0.3s ease;
 }
 
 /*MAIN*/
+
+main {
+      padding: 20px;
+}
+
 h2 {
-    margin: 20px;
+    margin: 30px 20px;
+    font-size: clamp(1.3rem, 4vw, 2rem);
+    text-align: center;
+}
+
+.title-2 {
+  text-align: center;
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  border-bottom: 2px solid #d9c9b3;
+  display: inline-block;
+  padding-bottom: 6px;
+  margin: 30px auto;
 }
 
 .title-3 {
-    margin: 20px;
-    font-size: 18px;
+    margin: 15px 0;
+    font-size: clamp(1rem, 3vw, 1.2rem);
     color: #3a2c2c;
-    margin-bottom: 8px;
 } 
 
-.contenedor-almendras, .contenedor-nueces, .contenedor-pasas-uvas, .contenedor-ajos {
-    margin: 20px;
-    
-}
+.contenedor-productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            border-radius: 20px;
+            background-color: #f4efed;
+            padding: 30px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .contenedor-productos > div {
+            background-color: #fffdfb;
+            border-radius: 15px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contenedor-productos > div:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
 
 .contenedor-productos img {
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    margin-bottom: 10px; object-fit: cover;
-    transition: transform 0.4s ease, filter 0.4s ease;
+            width: 100%;
+            max-width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            object-fit: cover;
+            transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 .contenedor-productos img:hover {
@@ -82,92 +131,52 @@ h2 {
   filter: brightness(1.05);
 }
 
-.parraf-ajos {
-    max-width: 250px;
-    margin: auto;
-    
-}
-
-.contenedor-productos {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    border-radius: 20px;
-    background-color: #f4efed;
-    padding: 40px 20px;
-    gap: 50px;
-}
-
-.contenedor-productos > div {
-  background-color: #fffdfb; /* un blanco más suave */
-  border-radius: 15px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-  padding: 20px;
-  text-align: center;
-  width: 270px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-}
-
-.contenedor-productos > div:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
 .contenedor-productos p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.4;
-}
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
+            color: #555;
+            line-height: 1.4;
+        }
 
-.title-2 {
-  text-align: center;
-  font-size: 24px;
-  border-bottom: 2px solid #d9c9b3;
-  display: inline-block;
-  padding-bottom: 6px;
-  margin-bottom: 30px;
-}
 
 /*Formulario*/
 
 .section-form {
-    margin: 20px;
+            margin: 40px auto;
+            max-width: 600px;
+            padding: 0 20px;
    
 }
 .div-title2 {
    text-align: center;
+   margin: 40px 0 20px;
 }
 
 .div-title2 h2 {
-   font-size: 24px;
-   border-bottom: 2px solid #d9c9b3;
-   display: inline-block;
-   position: relative;
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            border-bottom: 2px solid #d9c9b3;
+            display: inline-block;
+            padding-bottom: 8px;
    
 }
 
 form {
-    border: none;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    margin: auto;
-    padding: 50px;
-    max-width: 500px;
-    width: 90%;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            padding: 30px 20px;
+            background: white;
+            border-radius: 15px;
 }
 
 .field {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    position: relative;
 }
 
 .field label {
       margin-bottom: 8px;
       color: #555;
       font-weight: bold;
+      font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .field input, 
@@ -176,7 +185,8 @@ form {
       border: 1px solid #ccc;
       border-radius: 10px;
       outline: none;
-      font-size: 16px;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      font-family: 'Poppins', sans-serif;
       transition: border 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -198,7 +208,7 @@ form {
       border-radius: 10px;
       background: #74ebd5;
       color: #fff;
-      font-size: 16px;
+      font-size: clamp(0.9rem, 2vw, 1rem);
       font-weight: bold;
       cursor: pointer;
       transition: background 0.3s ease, transform 0.2s ease;
@@ -206,14 +216,14 @@ form {
 
 button:hover {
     background: #4ed1c0;
-      transform: translateY(-2px);
+    transform: translateY(-2px);
 }
 
 /*Seccion Nosotros*/
 
 .nosotros-section {
             max-width: 1200px;
-            margin: 80px auto 60px;
+            margin: 60px auto;
             padding: 0 20px;
         }
 
@@ -223,23 +233,18 @@ button:hover {
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 0;
         }
 
         .nosotros-content {
-            padding: 60px 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            padding: 40px 30px;
         }
 
         .nosotros-content h2 {
-            font-size: 2.2em;
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
             color: #3d3d3d;
             margin-bottom: 25px;
-            position: relative;
-            display: inline-block;
         }
 
         .nosotros-content h2::after {
@@ -252,54 +257,20 @@ button:hover {
         }
 
         .nosotros-content p {
-            font-size: 1.1em;
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
             line-height: 1.8;
             color: #555;
             margin-bottom: 20px;
         }
 
         .nosotros-image {
-            position: relative;
-            min-height: 400px;
+            min-height: 300px;
             background: linear-gradient(rgba(109, 213, 195, 0.1), rgba(109, 213, 195, 0.1)),
                         url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%23d4a574" width="800" height="600"/><g fill="%23a67c52" opacity="0.3"><circle cx="200" cy="150" r="80"/><circle cx="600" cy="200" r="60"/><circle cx="400" cy="400" r="100"/><circle cx="150" cy="450" r="70"/><circle cx="650" cy="450" r="90"/></g><text x="400" y="300" font-family="Arial" font-size="60" fill="%238b6f47" text-anchor="middle" opacity="0.5">FRUTOS SECOS</text></svg>');
             background-size: cover;
             background-position: center;
         }
 
-        @media (max-width: 968px) {
-            .nosotros-container {
-                grid-template-columns: 1fr;
-            }
-
-            .nosotros-content {
-                padding: 40px 30px;
-            }
-
-            .nosotros-image {
-                min-height: 300px;
-                order: -1;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .header h1 {
-                font-size: 2em;
-            }
-
-            .contact-section {
-                margin: 40px 20px;
-                padding: 30px 20px;
-            }
-
-            .nosotros-content h2 {
-                font-size: 1.8em;
-            }
-
-            .nosotros-content p {
-                font-size: 1em;
-            }
-        }
 /* Notificación personalizada */
 
         .notification {
@@ -322,13 +293,13 @@ button:hover {
 
         .notification.show {
             display: flex;
-            top: 30px;
+            top: 20px;
             opacity: 1;
         }
 
         .notification-icon {
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             background-color: #6dd5c3;
             border-radius: 50%;
             display: flex;
@@ -338,8 +309,8 @@ button:hover {
         }
 
         .notification-icon svg {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             stroke: white;
             stroke-width: 3;
         }
@@ -352,12 +323,12 @@ button:hover {
             font-weight: 600;
             color: #333;
             margin-bottom: 5px;
-            font-size: 1.1em;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
         }
 
         .notification-message {
             color: #666;
-            font-size: 0.95em;
+            font-size: clamp(0.8rem, 2vw, 0.95rem);
         }
 
         .notification-close {
@@ -380,60 +351,15 @@ button:hover {
             color: #333;
         }
 
-        @media (max-width: 600px) {
-            .header h1 {
-                font-size: 2em;
-            }
-
-            .contact-section {
-                margin: 40px 20px;
-                padding: 30px 20px;
-            }
-
-            .nosotros-content h2 {
-                font-size: 1.8em;
-            }
-
-            .nosotros-content p {
-                font-size: 1em;
-            }
-
-            .notification {
-                padding: 15px 20px;
-                max-width: 85%;
-            }
-
-            .notification-icon {
-                width: 35px;
-                height: 35px;
-            }
-
-            .notification-title {
-                font-size: 1em;
-            }
-
-            .notification-message {
-                font-size: 0.9em;
-            }
-        }
-
-
         /*Ofertas especiales*/
-
-        h2 {
-          text-align: center;
-          color: #2d3436;
-          font-size: 2rem;
-          margin-bottom: 40px;
-          text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
 
         .offers-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
+      gap: 25px;
+      max-width: 1400px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
     .card {
@@ -441,7 +367,6 @@ button:hover {
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      position: relative;
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
@@ -453,7 +378,7 @@ button:hover {
     .image-container {
       position: relative;
       width: 100%;
-      height: 220px;
+      height: 200px;
       overflow: hidden;
       background: #f8f9fa;
     }
@@ -475,9 +400,9 @@ button:hover {
       left: 15px;
       background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
       color: #fff;
-      padding: 8px 16px;
+      padding: 6px 14px;
       border-radius: 25px;
-      font-size: 0.85rem;
+      font-size: clamp(0.75rem, 2vw, 0.85rem);
       font-weight: 700;
       z-index: 2;
       box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
@@ -494,32 +419,32 @@ button:hover {
     }
 
     .stock-indicator {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      background: rgba(255, 255, 255, 0.95);
-      padding: 5px 12px;
-      border-radius: 15px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #ff6b6b;
-      z-index: 2;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: clamp(0.7rem, 2vw, 0.75rem);
+            font-weight: 600;
+            color: #ff6b6b;
+            z-index: 2;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     .card-content {
-      padding: 25px;
+      padding: 20px;
     }
 
     .card-content h3 {
-      margin: 0 0 12px;
-      font-size: 1.3rem;
-      color: #2d3436;
-      font-weight: 700;
+            margin: 0 0 12px;
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+            color: #2d3436;
+            font-weight: 700;
     }
 
     .card-content p {
-      font-size: 0.95rem;
+      font-size: clamp(0.85rem, 2vw, 0.95rem);
       color: #636e72;
       line-height: 1.5;
       margin-bottom: 15px;
@@ -528,10 +453,11 @@ button:hover {
     .product-info {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 8px;
       margin-bottom: 15px;
       color: #636e72;
-      font-size: 0.9rem;
+      font-size: clamp(0.8rem, 2vw, 0.9rem);
     }
 
     .stock-bar {
@@ -557,6 +483,7 @@ button:hover {
     .price {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 12px;
       margin-bottom: 8px;
     }
@@ -564,13 +491,13 @@ button:hover {
     .old-price {
       text-decoration: line-through;
       color: #b2bec3;
-      font-size: 1rem;
+      font-size: clamp(0.9rem, 2vw, 1rem);
     }
 
     .new-price {
       color: #00b894;
       font-weight: 800;
-      font-size: 1.5rem;
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
     }
 
     .savings {
@@ -579,21 +506,22 @@ button:hover {
       color: #00b894;
       padding: 4px 10px;
       border-radius: 8px;
-      font-size: 0.85rem;
+      font-size: clamp(0.75rem, 2vw, 0.85rem);
       font-weight: 600;
     }
 
     .offer-btn {
-      display: block;
-      background: linear-gradient(135deg, #00b894, #00cec9);
-      color: white;
-      text-decoration: none;
-      padding: 14px 24px;
-      border-radius: 12px;
-      font-weight: 700;
-      text-align: center;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
+            display: block;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-align: center;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
     }
 
     .offer-btn:hover {
@@ -602,17 +530,67 @@ button:hover {
       box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
     }
 
-    .offer-btn:active {
-      transform: translateY(0);
-    }
+    /* Media Queries para tablets y escritorio */
+       
+     @media (min-width: 768px) {
+            .nosotros-container {
+                grid-template-columns: 1fr 1fr;
+            }
 
-    @media (max-width: 768px) {
-      .offers-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
+            .nosotros-content {
+                padding: 60px 50px;
+            }
 
-      h2 {
-        font-size: 1.5rem;
-      }
-    }
+            .nosotros-image {
+                min-height: 400px;
+            }
+
+            form {
+                padding: 50px;
+            }
+
+            .notification {
+                padding: 20px 30px;
+            }
+
+            .notification-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .notification-icon svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .contenedor-productos {
+                grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            }
+        }
+
+        /* Ajustes para pantallas muy pequeñas */
+        @media (max-width: 480px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .contenedor-productos {
+                padding: 20px 10px;
+                gap: 20px;
+            }
+
+            .offers-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+   
+    

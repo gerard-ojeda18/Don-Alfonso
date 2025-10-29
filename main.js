@@ -1,8 +1,7 @@
-function showNotification() {
+ function showNotification() {
             const notification = document.getElementById('notification');
             notification.classList.add('show');
             
-            // Ocultar automáticamente después de 5 segundos
             setTimeout(() => {
                 hideNotification();
             }, 5000);
@@ -17,4 +16,26 @@ function showNotification() {
             e.preventDefault();
             showNotification();
             this.reset();
+        });
+
+        // Smooth scroll para los enlaces del menú
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId !== '' && targetId !== '#inicio') {
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                } else {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
