@@ -14,6 +14,29 @@
 
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            // Obtener los datos del formulario
+            const nombre = document.getElementById('nombre').value;
+            const correo = document.getElementById('correo').value;
+            const telefono = document.getElementById('telefono').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            // Número de WhatsApp (reemplaza con tu número, incluye código de país sin +)
+            // Ejemplo: Argentina 54, seguido del número sin 0 ni 15
+            const numeroWhatsApp = '5491136207025'; // CAMBIA ESTE NÚMERO
+            
+            // Crear el mensaje
+            const mensajeWhatsApp = `*Nuevo contacto desde la web*%0A%0A` +
+                                   `*Nombre:* ${nombre}%0A` +
+                                   `*Email:* ${correo}%0A` +
+                                   `*Teléfono:* ${telefono}%0A` +
+                                   `*Mensaje:* ${mensaje}`;
+            
+            // Abrir WhatsApp
+            const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeWhatsApp}`;
+            window.open(urlWhatsApp, '_blank');
+            
+            // Mostrar notificación
             showNotification();
             this.reset();
         });
