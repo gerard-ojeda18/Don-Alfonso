@@ -25,25 +25,23 @@
 
         // Formulario
         const form = document.getElementById('contactForm');
-        const notification = document.getElementById('notification');
 
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            showNotification();
-            form.reset();
-        });
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
 
-        function showNotification() {
-            notification.classList.add('show');
-            setTimeout(() => {
-                hideNotification();
-            }, 4000);
-        }
+  // Tu número en formato internacional (Argentina: 54 + número sin el 0 ni 15)
+  const phoneNumber = "541136207025";  
+  const message = "Hola, estoy interesado/a en los productos";
 
-        function hideNotification() {
-            notification.classList.remove('show');
-        }
-        
+  // Crear URL de WhatsApp
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  // Abrir WhatsApp en una nueva pestaña
+  window.open(url, "_blank");
+
+  // (Opcional) Resetear el formulario después
+  form.reset();
+});
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -55,8 +53,6 @@
                 }
             });
         });
-
- 
  
  /*function showNotification() {
             const notification = document.getElementById('notification');
