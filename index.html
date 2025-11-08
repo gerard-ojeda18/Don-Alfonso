@@ -13,303 +13,390 @@
     <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-    <header>
-        <p class="distributor">Distribuidora</p>
-        <h1 class="title">"DON ALFONSO"</h1>
-        <div>
-            <p class="text">En Distribuidora Don Alfonso nos especializamos en la venta de especias, frutos secos y legumbres de la mejor calidad. Ofrecemos productos frescos y seleccionados para mayoristas, minoristas y familias que buscan lo natural y saludable.</p>
-        </div>
-    </header>
-
+    <!-- NAVBAR -->
     <nav class="navbar" role="navigation" aria-label="Menú principal">
         <div class="nav-container">
-            <div class="nav-logo">🌰 Don Alfonso</div>
+            <div class="nav-logo">
+                <span>🌰</span>
+                <span>Don Alfonso</span>
+            </div>
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <div class="nav-links" id="navLinks">
-                <a href="#inicio" aria-label="Ir a inicio">Inicio</a>
-                <a href="#productos" aria-label="Ver nuestros productos">Productos</a>
-                <a href="#contacto" aria-label="Formulario de contacto">Contacto</a>
-                <a href="#nosotros" aria-label="Conocer más sobre nosotros">Nosotros</a>
-                <a href="#ofertas" aria-label="Ver ofertas especiales">Ofertas</a>
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="#ofertas">Ofertas</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
             </div>
         </div>
     </nav>
 
-    <main>
-        <div style="text-align: center; margin: 50px 0 30px;">
-            <h2 class="title-2">Productos destacados</h2>
-        </div>
-
-        <section id="productos" class="contenedor-productos" aria-label="Productos destacados">
-            <article>
-                <h3 class="title-3">Almendras</h3>
-                <img src="https://th.bing.com/th/id/R.d97635ece420f51faec2bfa27168251d?rik=7gzCG8gIJFD4Gg&riu=http%3a%2f%2fsitiodelasalud.com%2fwp-content%2fuploads%2f2020%2f01%2falmendras.jpg&ehk=MBnDun30P%2fPcswrWSYHUlZFMpq8BsI%2fwWuflCb%2feY3U%3d&risl=&pid=ImgRaw&r=0" alt="Almendras premium" loading="lazy">
-                <p>Ricas en proteínas y grasas saludables.</p>
-            </article>
-            <article>
-                <h3 class="title-3">Nueces peladas</h3>
-                <img src="https://tse4.mm.bing.net/th/id/OIP.KGt4ZnSTIY8khuCtIk98YQHaHa?rs=1&pid=ImgDetMain" alt="Nueces peladas" loading="lazy">
-                <p>Seleccionadas y frescas todo el año.</p>
-            </article>
-            <article>
-                <h3 class="title-3">Pasas de uvas</h3>
-                <img src="https://tse3.mm.bing.net/th/id/OIP.jx5Hni-G5bBgaZKkckv35gHaHa?rs=1&pid=ImgDetMain" alt="Pasas de uva" loading="lazy">
-                <p>Pequeñas, dulces y una potencia de nutrientes</p>
-            </article>
-            <article>
-                <h3 class="title-3">Ajos variados</h3>
-                <img src="https://tse2.mm.bing.net/th/id/OIP.UJQ-6R_0i4m0aKCzrpFSBgHaHa?rs=1&pid=ImgDetMain" alt="Ajos frescos" loading="lazy">
-                <p>Te enriquecen las comidas y fuerte en minerales: Los podes pedir tanto como desgranados y pelados</p>
-            </article>
-            <article>
-                <h3 class="title-3">Arándanos</h3>
-                <img src="./img/OIP.webp"Arándanos" loading="lazy">
-                <p>Pequeños, jugosos y llenos de sabor</p>
-            </article>
-            <article>
-                <h3 class="title-3">Dátiles</h3>
-                <img src="https://productoslacena.com.ec/wp-content/uploads/2020/04/Datiles.jpg" alt="Dátiles premium" loading="lazy">
-                <p>Dulces, suaves y llenos de energía natural</p>
-            </article>
-        </section>
-
-        <div class="notification" id="notification" role="alert" aria-live="polite">
-            <div class="notification-icon">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M20 6L9 17L4 12" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </div>
-            <div class="notification-content">
-                <div class="notification-title">¡Mensaje enviado!</div>
-                <div class="notification-message">Responderemos tu consulta a la brevedad.</div>
-            </div>
-            <button class="notification-close" onclick="hideNotification()" aria-label="Cerrar notificación">×</button>
-        </div>
-
-        <div class="div-title2">
-            <h2 id="contacto">Contactanos</h2>
-        </div>
-
-        <section class="section-form" aria-label="Formulario de contacto">
-            <form id="contactForm" name="contacto" method="post">
-                <div class="field">
-                    <label for="nombre">Nombre y Apellido: </label>
-                    <input type="text" name="nombre" id="nombre" required aria-required="true" autocomplete="name">
-                </div>
-                <div class="field">
-                    <label for="correo">Correo electrónico:</label>
-                    <input type="email" name="correo" id="correo" required aria-required="true" autocomplete="email">
-                </div>
-                <div class="field">
-                    <label for="telefono">Teléfono:</label>
-                    <input type="tel" name="telefono" id="telefono" autocomplete="tel">
-                </div>
-                <div class="field">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea name="mensaje" id="mensaje" placeholder="Su consulta no molesta" required aria-required="true"></textarea>
-                </div>
-                <button type="submit">Enviar mensaje</button>
-            </form>
-        </section>
-
-        <div id="nosotros" class="nosotros-section">
-            <div class="nosotros-container">
-                <article class="nosotros-content">
-                    <h2>Nosotros</h2>
-                    <p><strong>Distribuidora Don Alfonso</strong> nació con el objetivo de ofrecer alimentos naturales y frescos a precios justos, priorizando la calidad y la atención personalizada.</p>
-                    <p>Desde nuestros inicios, nos hemos comprometido a seleccionar cuidadosamente cada producto, trabajando directamente con productores de confianza para garantizar que nuestros clientes reciban lo mejor en frutos secos, granos, semillas y productos naturales.</p>
-                    <p>Nuestra pasión es conectar a las familias con alimentos saludables que nutren el cuerpo y el espíritu, manteniendo siempre un servicio cercano y humano.</p>
-                </article>
-                <div class="nosotros-image" role="img" aria-label="Imagen representativa de frutos secos"></div>
+    <!-- HERO SECTION -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="hero-badge">DISTRIBUIDORA</div>
+            <h1 class="hero-title">Don Alfonso</h1>
+            <p class="hero-subtitle">
+                Frutos secos, especias y legumbres de primera calidad. 
+                Productos frescos y seleccionados para mayoristas, minoristas 
+                y familias que buscan lo natural y saludable.
+            </p>
+            <div class="hero-cta">
+                <a href="#productos" class="btn btn-primary">Ver productos</a>
+                <a href="#contacto" class="btn btn-secondary">Contáctanos</a>
             </div>
         </div>
+    </section>
 
-        <h2 id="ofertas">🌰 Ofertas Especiales - Don Alfonso</h2>
+    <!-- STATS -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Años de experiencia</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Clientes satisfechos</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Productos disponibles</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Calidad garantizada</div>
+            </div>
+        </div>
+    </section>
 
-        <section class="offers-container" aria-label="Ofertas especiales">
-            <article class="card">
-                <div class="image-container">
-                    <span class="badge">10% OFF</span>
-                    <span class="stock-indicator">⚡ Stock limitado</span>
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_935290-MLM42417980174_062020-F.jpg" alt="Almendras Premium" loading="lazy">
+    <!-- PRODUCTOS -->
+    <section id="productos">
+        <div class="section-title">
+            <h2>Productos Destacados</h2>
+            <p>Descubre nuestra selección premium de frutos secos y más</p>
+        </div>
+
+        <div class="products-grid">
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="https://th.bing.com/th/id/R.d97635ece420f51faec2bfa27168251d?rik=7gzCG8gIJFD4Gg&riu=http%3a%2f%2fsitiodelasalud.com%2fwp-content%2fuploads%2f2020%2f01%2falmendras.jpg&ehk=MBnDun30P%2fPcswrWSYHUlZFMpq8BsI%2fwWuflCb%2feY3U%3d&risl=&pid=ImgRaw&r=0" alt="Almendras premium">
                 </div>
-                <div class="card-content">
-                    <h3>Almendras Premium</h3>
-                    <p>Almendras seleccionadas sin cáscara, ideales para un snack saludable. 🥜</p>
-                    <div class="product-info"><strong>📦 1 kg</strong></div>
-                    <div class="stock-bar"><div class="stock-fill" style="width: 35%;"></div></div>
-                    <div class="price-section">
-                        <div class="price">
+                <div class="product-content">
+                    <h3 class="product-title">Almendras</h3>
+                    <p class="product-description">Ricas en proteínas y grasas saludables. Perfectas para snacks o repostería.</p>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.KGt4ZnSTIY8khuCtIk98YQHaHa?rs=1&pid=ImgDetMain" alt="Nueces peladas">
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Nueces Peladas</h3>
+                    <p class="product-description">Seleccionadas y frescas todo el año. Ideales para tu salud cardiovascular.</p>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.jx5Hni-G5bBgaZKkckv35gHaHa?rs=1&pid=ImgDetMain" alt="Pasas de uva">
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Pasas de Uvas</h3>
+                    <p class="product-description">Pequeñas, dulces y una potencia de nutrientes para tu día a día.</p>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.UJQ-6R_0i4m0aKCzrpFSBgHaHa?rs=1&pid=ImgDetMain" alt="Ajos frescos">
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Ajos Variados</h3>
+                    <p class="product-description">Enriquecen tus comidas y fuertes en minerales. Disponibles desgranados y pelados.</p>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="https://nutricion360.es/wp-content/uploads/2019/07/arandanos-deshidratados.jpg" alt="Arándanos">
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Arándanos</h3>
+                    <p class="product-description">Pequeños, jugosos y llenos de sabor. Antioxidantes naturales.</p>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="https://productoslacena.com.ec/wp-content/uploads/2020/04/Datiles.jpg" alt="Dátiles premium">
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Dátiles</h3>
+                    <p class="product-description">Dulces, suaves y llenos de energía natural para tu rutina deportiva.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- OFERTAS -->
+    <section id="ofertas">
+        <div class="section-title">
+            <h2>🌰 Ofertas Especiales</h2>
+            <p>Aprovecha nuestras promociones exclusivas</p>
+        </div>
+
+        <div class="offers-grid">
+            <article class="offer-card">
+                <div class="offer-image">
+                    <span class="offer-badge">10% OFF</span>
+                    <span class="stock-label">⚡ Stock limitado</span>
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_935290-MLM42417980174_062020-F.jpg" alt="Almendras Premium">
+                </div>
+                <div class="offer-content">
+                    <h3 class="offer-title">Almendras Premium</h3>
+                    <p class="offer-description">Almendras seleccionadas sin cáscara, ideales para un snack saludable. 🥜</p>
+                    <div class="offer-info">
+                        <strong>📦 1 kg</strong>
+                    </div>
+                    <div class="stock-bar">
+                        <div class="stock-fill" style="width: 35%;"></div>
+                    </div>
+                    <div class="price-box">
+                        <div class="price-row">
                             <span class="old-price">$30.000</span>
                             <span class="new-price">$26.000</span>
                         </div>
-                        <span class="savings">💰 Ahorrás $4.000</span>
+                        <span class="savings-tag">💰 Ahorrás $4.000</span>
                     </div>
-                    <a href="#contacto" class="offer-btn" aria-label="Consultar oferta">Consultar oferta</a>
+                    <a href="#contacto" class="btn btn-primary" style="width: 100%;">Consultar oferta</a>
                 </div>
             </article>
 
-            <article class="card">
-                <div class="image-container">
-                    <span class="badge">10% OFF</span>
-                    <img src="https://gardenerspath.com/wp-content/uploads/2023/07/White-Walnuts-Juglans-cinerea.jpg" alt="Nueces sin cáscara" loading="lazy">
+            <article class="offer-card">
+                <div class="offer-image">
+                    <span class="offer-badge">10% OFF</span>
+                    <img src="https://gardenerspath.com/wp-content/uploads/2023/07/White-Walnuts-Juglans-cinerea.jpg" alt="Nueces sin cáscara">
                 </div>
-                <div class="card-content">
-                    <h3>Nueces sin Cáscara</h3>
-                    <p>Nueces frescas, perfectas para repostería y consumo directo. 🌰</p>
-                    <div class="product-info"><strong>📦 1 kg</strong> • Hasta agotar stock</div>
-                    <div class="price-section">
-                        <div class="price">
+                <div class="offer-content">
+                    <h3 class="offer-title">Nueces sin Cáscara</h3>
+                    <p class="offer-description">Nueces frescas, perfectas para repostería y consumo directo. 🌰</p>
+                    <div class="offer-info">
+                        <strong>📦 1 kg</strong> • Hasta agotar stock
+                    </div>
+                    <div class="price-box">
+                        <div class="price-row">
                             <span class="old-price">$23.000</span>
                             <span class="new-price">$20.000</span>
                         </div>
-                        <span class="savings">💰 Ahorrás $3.000</span>
+                        <span class="savings-tag">💰 Ahorrás $3.000</span>
                     </div>
-                    <a href="#contacto" class="offer-btn" aria-label="Consultar oferta">Consultar oferta</a>
+                    <a href="#contacto" class="btn btn-primary" style="width: 100%;">Consultar oferta</a>
                 </div>
             </article>
 
-            <article class="card">
-                <div class="image-container">
-                    <span class="badge">20% OFF</span>
-                    <img src="https://img.freepik.com/fotos-premium/mezcla-frutos-secos-organicos-caseros-sobre-mesa-madera_981499-77.jpg" alt="Mix de frutos secos" loading="lazy">
+            <article class="offer-card">
+                <div class="offer-image">
+                    <span class="offer-badge">20% OFF</span>
+                    <img src="https://img.freepik.com/fotos-premium/mezcla-frutos-secos-organicos-caseros-sobre-mesa-madera_981499-77.jpg" alt="Mix de frutos secos">
                 </div>
-                <div class="card-content">
-                    <h3>Mix de Frutos Secos</h3>
-                    <p>Combinación de almendras, nueces, avellanas y castañas. 🥣</p>
-                    <div class="product-info"><strong>📦 1 kg</strong> • ⭐ Oferta de la semana</div>
-                    <div class="price-section">
-                        <div class="price">
+                <div class="offer-content">
+                    <h3 class="offer-title">Mix de Frutos Secos</h3>
+                    <p class="offer-description">Combinación de almendras, nueces, avellanas y castañas. 🥣</p>
+                    <div class="offer-info">
+                        <strong>📦 1 kg</strong> • ⭐ Oferta de la semana
+                    </div>
+                    <div class="price-box">
+                        <div class="price-row">
                             <span class="old-price">$20.000</span>
                             <span class="new-price">$15.000</span>
                         </div>
-                        <span class="savings">💰 Ahorrás $5.000</span>
+                        <span class="savings-tag">💰 Ahorrás $5.000</span>
                     </div>
-                    <a href="#contacto" class="offer-btn" aria-label="Consultar oferta">Consultar oferta</a>
+                    <a href="#contacto" class="btn btn-primary" style="width: 100%;">Consultar oferta</a>
                 </div>
             </article>
 
-            <article class="card">
-                <div class="image-container">
-                    <span class="badge">20% OFF</span>
-                    <img src="https://tse2.mm.bing.net/th/id/OIP.1ifOSmn5LaevACmydp61_wHaEJ?rs=1&pid=ImgDetMain" alt="Pasas de uva" loading="lazy">
+            <article class="offer-card">
+                <div class="offer-image">
+                    <span class="offer-badge">20% OFF</span>
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.1ifOSmn5LaevACmydp61_wHaEJ?rs=1&pid=ImgDetMain" alt="Pasas de uva">
                 </div>
-                <div class="card-content">
-                    <h3>Pasas de Uva</h3>
-                    <p>Dulzura natural y textura suave para tus recetas o snacks. 🌿</p>
-                    <div class="product-info"><strong>📦 1 kg</strong> • 🆕 Nuevo ingreso</div>
-                    <div class="price-section">
-                        <div class="price">
+                <div class="offer-content">
+                    <h3 class="offer-title">Pasas de Uva</h3>
+                    <p class="offer-description">Dulzura natural y textura suave para tus recetas o snacks. 🌿</p>
+                    <div class="offer-info">
+                        <strong>📦 1 kg</strong> • 🆕 Nuevo ingreso
+                    </div>
+                    <div class="price-box">
+                        <div class="price-row">
                             <span class="old-price">$13.000</span>
                             <span class="new-price">$10.000</span>
                         </div>
-                        <span class="savings">💰 Ahorrás $3.000</span>
+                        <span class="savings-tag">💰 Ahorrás $3.000</span>
                     </div>
-                    <a href="#contacto" class="offer-btn" aria-label="Consultar oferta">Consultar oferta</a>
+                    <a href="#contacto" class="btn btn-primary" style="width: 100%;">Consultar oferta</a>
                 </div>
             </article>
 
-            <article class="card">
-                <div class="image-container">
-                    <span class="badge">18% OFF</span>
-                    <span class="stock-indicator">⚡ Stock limitado</span>
-                    <img src="https://mui.today/__export/1596668285097/sites/mui/img/2020/08/05/beneficios-del-ajo-crudo.jpg_693688582.jpg" alt="Ajos variados" loading="lazy">
+            <article class="offer-card">
+                <div class="offer-image">
+                    <span class="offer-badge">18% OFF</span>
+                    <span class="stock-label">⚡ Stock limitado</span>
+                    <img src="https://mui.today/__export/1596668285097/sites/mui/img/2020/08/05/beneficios-del-ajo-crudo.jpg_693688582.jpg" alt="Ajos variados">
                 </div>
-                <div class="card-content">
-                    <h3>Ajos Variados</h3>
-                    <p>Intenso y aromático, ideal para realzar el sabor de tus comidas. 🧄</p>
-                    <div class="product-info"><strong>📦 1 kg</strong> Disponibles en cabezas o desgranados</div>
-                    <div class="stock-bar"><div class="stock-fill" style="width: 45%;"></div></div>
-                    <div class="price-section">
-                        <div class="price">
+                <div class="offer-content">
+                    <h3 class="offer-title">Ajos Variados</h3>
+                    <p class="offer-description">Intenso y aromático, ideal para realzar el sabor de tus comidas. 🧄</p>
+                    <div class="offer-info">
+                        <strong>📦 1 kg</strong> • Cabezas o desgranados
+                    </div>
+                    <div class="stock-bar">
+                        <div class="stock-fill" style="width: 45%;"></div>
+                    </div>
+                    <div class="price-box">
+                        <div class="price-row">
                             <span class="old-price">$9.000</span>
                             <span class="new-price">$7.000</span>
                         </div>
-                        <span class="savings">💰 Ahorrás $2.000</span>
+                        <span class="savings-tag">💰 Ahorrás $2.000</span>
                     </div>
-                    <a href="#contacto" class="offer-btn" aria-label="Consultar oferta">Consultar oferta</a>
+                    <a href="#contacto" class="btn btn-primary" style="width: 100%;">Consultar oferta</a>
                 </div>
             </article>
 
-            <article class="card">
-                <div class="image-container">
-                    <span class="badge">10% OFF</span>
-                    <img src="https://nutricion360.es/wp-content/uploads/2019/07/arandanos-deshidratados.jpg" alt="Arándanos deshidratados" loading="lazy">
+            <article class="offer-card">
+                <div class="offer-image">
+                    <span class="offer-badge">10% OFF</span>
+                    <img src="https://nutricion360.es/wp-content/uploads/2019/07/arandanos-deshidratados.jpg" alt="Arándanos deshidratados">
                 </div>
-                <div class="card-content">
-                    <h3>Arándanos Deshidratados</h3>
-                    <p>Arándanos dulces y naturales, perfectos para ensaladas o snacks. 🫐</p>
-                    <div class="product-info"><strong>📦 1 kg</strong> • ⭐ Producto destacado</div>
-                    <div class="price-section">
-                        <div class="price">
+                <div class="offer-content">
+                    <h3 class="offer-title">Arándanos Deshidratados</h3>
+                    <p class="offer-description">Arándanos dulces y naturales, perfectos para ensaladas o snacks. 🫐</p>
+                    <div class="offer-info">
+                        <strong>📦 1 kg</strong> • ⭐ Producto destacado
+                    </div>
+                    <div class="price-box">
+                        <div class="price-row">
                             <span class="old-price">$20.000</span>
                             <span class="new-price">$18.000</span>
                         </div>
-                        <span class="savings">💰 Ahorrás $2.000</span>
+                        <span class="savings-tag">💰 Ahorrás $2.000</span>
                     </div>
-                    <a href="#contacto" class="offer-btn" aria-label="Consultar oferta">Consultar oferta</a>
+                    <a href="#contacto" class="btn btn-primary" style="width: 100%;">Consultar oferta</a>
                 </div>
             </article>
+        </div>
+    </section>
 
-            <article class="card">
-                <div class="image-container">
-                    <span class="badge">15% OFF</span>
-                    <img src="https://tse3.mm.bing.net/th/id/OIP.OYi6rhWNolEEeilVXny36wHaD3?rs=1&pid=ImgDetMain" alt="Dátiles premium" loading="lazy">
-                </div>
-                <div class="card-content">
-                    <h3>Dátiles</h3>
-                    <p>Dátiles premium, naturalmente dulces y jugosos. Energía instantánea. 🌴</p>
-                    <div class="product-info"><strong>📦 1 kg</strong> • 🆕 Calidad premium</div>
-                    <div class="price-section">
-                        <div class="price">
-                            <span class="old-price">$18.000</span>
-                            <span class="new-price">$15.000</span>
-                        </div>
-                        <span class="savings">💰 Ahorrás $3.000</span>
-                    </div>
-                    <a href="#contacto" class="offer-btn" aria-label="Consultar oferta">Consultar oferta</a>
-                </div>
-            </article>
-        </section>
-    </main>
+    <!-- NOSOTROS -->
+    <section class="about-section" id="nosotros">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="about-title">Nosotros</h2>
+                <p class="about-text">
+                    <strong>Distribuidora Don Alfonso</strong> nació con el objetivo de ofrecer alimentos naturales y frescos a precios justos, priorizando la calidad y la atención personalizada.
+                </p>
+                <p class="about-text">
+                    Desde nuestros inicios, nos hemos comprometido a seleccionar cuidadosamente cada producto, trabajando directamente con productores de confianza para garantizar que nuestros clientes reciban lo mejor en frutos secos, granos, semillas y productos naturales.
+                </p>
+                <p class="about-text">
+                    Nuestra pasión es conectar a las familias con alimentos saludables que nutren el cuerpo y el espíritu, manteniendo siempre un servicio cercano y humano.
+                </p>
+            </div>
+            <div class="about-image"></div>
+        </div>
+    </section>
 
-    <footer class="footer" role="contentinfo">
-        <div class="footer-container">
+    <!-- CONTACTO -->
+    <section class="contact-section" id="contacto">
+        <div class="form-container">
+            <h2 class="form-title">Contáctanos</h2>
+            <p class="form-subtitle">¿Tienes alguna consulta? Escríbenos y te responderemos a la brevedad</p>
+            
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre y Apellido</label>
+                    <input type="text" id="nombre" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="correo" class="form-label">Correo electrónico</label>
+                    <input type="email" id="correo" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="tel" id="telefono" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea id="mensaje" class="form-textarea" placeholder="Cuéntanos tu consulta..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- NOTIFICACIÓN -->
+    <div class="notification" id="notification" role="alert" aria-live="polite">
+        <div class="notification-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="notification-content">
+            <div class="notification-title">¡Mensaje enviado!</div>
+            <div class="notification-message">Responderemos tu consulta a la brevedad.</div>
+        </div>
+        <button class="notification-close" onclick="hideNotification()">×</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
             <div class="footer-column">
                 <h3>Contacto</h3>
                 <div class="footer-item">
-                    <span class="footer-icon" aria-hidden="true">📍</span>
-                    <address style="font-style: normal;">Tristan Suarez<br>Buenos Aires, Argentina</address>
+                    <span class="footer-icon">📍</span>
+                    <div>
+                        <p>Tristán Suárez</p>
+                        <p>Buenos Aires, Argentina</p>
+                    </div>
                 </div>
                 <div class="footer-item">
-                    <span class="footer-icon" aria-hidden="true">📞</span>
-                    <p><a href="tel:+5491136207025" aria-label="Llamar">+54 9 11 3620-7025</a></p>
+                    <span class="footer-icon">📞</span>
+                    <p><a href="tel:+5491136207025">+54 9 11 3620-7025</a></p>
                 </div>
                 <div class="footer-item">
-                    <span class="footer-icon" aria-hidden="true">📧</span>
-                    <p><a href="mailto:ojedagerard5@gmail.com" aria-label="Enviar email">ojedagerard5@gmail.com</a></p>
+                    <span class="footer-icon">📧</span>
+                    <p><a href="mailto:ojedagerard5@gmail.com">ojedagerard5@gmail.com</a></p>
                 </div>
                 <div class="footer-item">
-                    <span class="footer-icon" aria-hidden="true">🕐</span>
-                    <p>Lun - Vie: 8:00 - 18:00<br>Sáb: 9:00 - 13:00</p>
+                    <span class="footer-icon">🕐</span>
+                    <div>
+                        <p>Lun - Vie: 8:00 - 18:00</p>
+                        <p>Sáb: 9:00 - 13:00</p>
+                    </div>
                 </div>
             </div>
 
             <div class="footer-column">
                 <h3>Enlaces Rápidos</h3>
-                <nav aria-label="Enlaces del footer">
-                    <ul class="footer-links">
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#productos">Productos</a></li>
-                        <li><a href="#ofertas">Ofertas</a></li>
-                        <li><a href="#nosotros">Nosotros</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </nav>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
             </div>
 
             <div class="footer-column">
@@ -325,25 +412,25 @@
 
             <div class="footer-column">
                 <h3>Síguenos</h3>
-                <p class="footer-social-text">Entérate de nuestras ofertas y novedades</p>
+                <p style="color: #b0b0b0; margin-bottom: 15px;">Entérate de nuestras ofertas y novedades</p>
                 <div class="social-icons">
-                    <a href="https://wa.me/5491136207025" target="_blank" rel="noopener" class="social-icon whatsapp" title="WhatsApp" aria-label="WhatsApp">
-                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <a href="https://wa.me/5491136207025" target="_blank" rel="noopener" class="social-icon whatsapp" title="WhatsApp">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                         </svg>
                     </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon instagram" title="Instagram" aria-label="Instagram">
-                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon instagram" title="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
                         </svg>
                     </a>
                 </div>
-                <div class="payment-methods">
-                    <p style="margin-bottom: 12px; font-size: 0.95rem; color: #999;">Medios de pago</p>
+                <div style="margin-top: 30px;">
+                    <p style="color: #b0b0b0; margin-bottom: 15px; font-size: 0.95rem;">Medios de pago</p>
                     <div class="payment-icons">
-                        <span aria-label="Tarjetas">💳</span>
-                        <span aria-label="Efectivo">💵</span>
-                        <span aria-label="Transferencia">🏦</span>
+                        <span>💳</span>
+                        <span>💵</span>
+                        <span>🏦</span>
                     </div>
                 </div>
             </div>
@@ -351,7 +438,7 @@
 
         <div class="footer-bottom">
             <p>&copy; 2025 Distribuidora Don Alfonso. Todos los derechos reservados.</p>
-            <p class="footer-dev">Diseñado con ❤️ para ofrecerte lo mejor en productos naturales</p>
+            <p>Diseñado con ❤️ para ofrecerte lo mejor en productos naturales</p>
         </div>
     </footer>
     <script src="./main.js"></script>
