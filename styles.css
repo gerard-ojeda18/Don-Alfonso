@@ -414,6 +414,67 @@
             line-height: 1.7;
         }
 
+        /* BADGES DE PRODUCTOS Y SOPAS */
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            z-index: 2;
+            box-shadow: 0 4px 15px rgba(139, 69, 19, 0.4);
+        }
+
+        .limited-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: linear-gradient(135deg, #ff6b6b, #ff8787);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            z-index: 2;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* PRECIOS DE PRODUCTOS */
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 18px;
+            padding-top: 18px;
+            border-top: 2px solid #f5f1ec;
+        }
+
+        .price-label {
+            color: var(--text-medium);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .price-value {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
         /* FORMULARIO MODERNO */
         .contact-section {
             max-width: 700px;
