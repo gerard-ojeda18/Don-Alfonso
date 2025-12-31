@@ -32,36 +32,7 @@ const menuToggle = document.getElementById('menuToggle');
             }
         });
 
-        // Formulario
-        const form = document.getElementById('contactForm');
-        const notification = document.getElementById('notification');
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const phoneNumber = "5491136207025";
-            const message = "Hola, estoy interesado/a en los productos de Don Alfonso";
-
-            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-            window.open(url, "_blank");
-
-            // Mostrar notificación
-            showNotification();
-
-            form.reset();
-        });
-
-        function showNotification() {
-            notification.classList.add('show');
-            setTimeout(() => {
-                hideNotification();
-            }, 4000);
-        }
-
-        function hideNotification() {
-            notification.classList.remove('show');
-        }
+        
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
